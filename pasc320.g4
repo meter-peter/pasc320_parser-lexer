@@ -116,7 +116,12 @@ parameter_list : parameter_list SEMI pass identifiers COLON typename
 
 pass : VAR //e
 
+<<<<<<< Updated upstream
 comp_statement : BEGIN statements END;
+=======
+ID :
+
+>>>>>>> Stashed changes
 
 statements : statements SEMI statement | statement;
 
@@ -167,6 +172,8 @@ write_item : expression
     |STRING
     ;
 
+
+ID : ^_?[a-z][a-z0-9_]*.[^_]$;
 
 
 
