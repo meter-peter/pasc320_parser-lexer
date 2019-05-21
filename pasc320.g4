@@ -61,10 +61,111 @@ type_defs :type_defs SEMI ID EQU type_def
 
 type_def : ARRAY LBRACK dims RBRACK OF typename
     |SET OF typename
+    |RECORD fields END
+    |LPAREN identifiers RPAREN
+    |limit DOTDOT limit
     ;
 
+dims : dims COMMA limits
+    |LPAREN identifiers RPAREN
+    |limit DOTDOT limit
+    ;
 
+limit : ADDOP ICONST
+   |ADDOP ID
+   |ICONST
+   |CCONST
+   |BCONST
+   |ID
+   ;
 
+typename : standard_type
+    |ID
+    ;
+
+standard_type : INTEGER | REAL | BOOLEAN | CHAR;
+
+fields: fields SEMI fields
+    |field
+    ;
+
+field : identifiers COLON typename;
+
+identifiers : identifiers COMMA ID
+    |ID
+    ;
+
+vardefs : VAR variable_defs SEMI; //e
+
+variable_defs : variable_defs SEMI identifiers COLON typename
+    |identifiers COLON typename
+    ;
+
+subprograms : subprogram+ SEMI; //e
+
+sub_header : FUNCTION ID formal_parameters COLON standard_type
+    |PROCEDURE ID foraml_parameters
+    | FUNCTION ID
+    ;
+
+formal_parameters: LPAREN parameter_list RPAREN; //e
+
+parameter_list : parameter_list SEMI pass identifiers COLON typename
+    | pass identifiers COLON typename
+    ;
+
+pass : VAR //e
+
+comp_statement : BEGIN statements END;
+
+statements : statements SEMI statement | statement;
+
+statement: assignment
+    |if_statement
+    |while_statement
+    |for_statement
+    |with_statement
+    |subprogram_call
+    |io_statement
+    |comp_statement
+    ; //e
+
+assignment : variable ASSIGN expression
+    |VARIABLE ASSIGN STRING
+    ;
+
+if_statement:IF expression THEN statement if_tail;
+
+if_tail : ELSE statement; //e
+
+for_statement : FOR ID ASSIGN iter_space DO statement;
+
+while_statement : WHILE expression DO statement;
+
+iter_space : expression TO expression
+    |expression DOWNTO expression;
+
+with_statement : WITH variable DO statement;
+
+subprogram_call : ID
+    | ID LPAREN expressions RPAREN
+    ;
+
+io_statement : READ LPAREN read_list;
+
+read_list :read_ list COMMA read_item
+    |write_item
+    ;
+
+read_item : variable;
+
+write_list : write_list COMMA write_item
+    |write_item
+    ;
+
+write_item : expression
+    |STRING
+    ;
 
 
 
