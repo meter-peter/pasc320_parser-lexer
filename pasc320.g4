@@ -1,7 +1,6 @@
 grammar pasc320;
 
 
-//parser rules
 program : header declarations subprograms comp_statements DOT ;
 
 header : PROGRAM ID SEMI;
@@ -168,7 +167,6 @@ write_item : expression
 
 
 
-//lexer
 
 
 fragment A
@@ -398,12 +396,9 @@ DIGIT :	[0-9];
 
 LETTERDIGIT : (LETTER|DIGIT);
 
-IDENT :
-    ;
-
 SEMI: ';';
 
-ARRAY:
+RELOP:
 
 
 
