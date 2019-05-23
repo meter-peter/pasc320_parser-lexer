@@ -178,7 +178,6 @@ write_item : expression
 
 
 
-
 //lexer
 
 
@@ -401,7 +400,7 @@ KEYWORDS : PROGRAM
     ;
 
 
-IDENT: '_'?('a' .. 'z' | 'A' .. 'Z') ('a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_')*;
+ID: '_'?('a' .. 'z' | 'A' .. 'Z') ('a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_')*;
 
 LETTER:	[A-Za-z_];
 
@@ -411,7 +410,7 @@ LETTERDIGIT : (LETTER|DIGIT);
 
 SEMI: ';';
 
-EQUAL: '=';
+EQU: '=';
 
 NOT_EQUAL: '<>';
 
@@ -423,7 +422,35 @@ GE: '>=';
 
 GT: '>';
 
-RELOP: LT|LE|GE|GT|EQUAL|NOT_EQUAL;
+RELOP: LT|LE|GE|GT|EQU|NOT_EQUAL;
+
+ΑDDOP : '+'|'-';
+
+NOTOP :'NOT';
+
+INOP : 'IN';
+
+STRINGLIT: ( '\\' [btnfr"'\\] | ~[\r\n\\"] )*;
+
+STRING: ('"')(LETTERDIGIT|STRINGLIT)*?('"');
+
+LPAREN :'(';
+
+RPAREN : ')';
+
+DOT : '.';
+
+COLON: ':';
+
+LBRACK : '[';
+
+RBRACK : ']';
+
+ASSIGN : ':=';
+
+DOTDOT : '..';
+
+
 
 
 

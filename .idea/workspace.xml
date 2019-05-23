@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="978e945d-025f-4e46-85cb-24d91dcde43d" name="Default Changelist" comment="">
+    <list default="true" id="978e945d-025f-4e46-85cb-24d91dcde43d" name="Default Changelist" comment=" mwra mou">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pasc320.g4" beforeDir="false" afterPath="$PROJECT_DIR$/pasc320.g4" afterDir="false" />
     </list>
@@ -24,8 +24,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pasc320.g4">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="169" selection-start-line="169" selection-end-line="169" />
+            <state relative-caret-position="185">
+              <caret line="424" column="22" selection-start-line="424" selection-start-column="22" selection-end-line="424" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -41,6 +41,11 @@
       </file>
     </leaf>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>DDOP</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -53,10 +58,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="2514" />
+    <option name="width" value="1253" />
     <option name="height" value="1088" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -114,7 +118,35 @@
       <option name="project" value="LOCAL" />
       <updated>1558608692203</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Update by petran">
+      <created>1558611423467</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1558611423467</updated>
+    </task>
+    <task id="LOCAL-00003" summary=" mwra mou">
+      <created>1558612737128</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1558612737128</updated>
+    </task>
+    <task id="LOCAL-00004" summary=" mwra mou">
+      <created>1558614173306</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1558614173306</updated>
+    </task>
+    <task id="LOCAL-00005" summary=" mwra mou">
+      <created>1558614489134</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1558614489134</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView">
@@ -127,16 +159,17 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="2491" height="1096" extended-state="6" />
+    <frame x="-8" y="0" width="1253" height="1088" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.51378036" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29086336" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" weight="0.32984293" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -145,10 +178,10 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32917964" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32917964" />
-      <window_info active="true" anchor="bottom" id="Tool Output" order="8" visible="true" weight="0.32917964" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32917964" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="ANTLR Preview" order="11" weight="0.32917964" />
+      <window_info anchor="bottom" id="Tool Output" order="8" sideWeight="0.7225482" weight="0.33125648" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49874267" weight="0.3281412" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50125736" side_tool="true" weight="0.32879582" />
+      <window_info active="true" anchor="bottom" id="ANTLR Preview" order="11" sideWeight="0.78038555" visible="true" weight="0.32879582" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24979044" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -190,7 +223,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Update by petran" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update by petran" />
+    <MESSAGE value=" mwra mou" />
+    <option name="LAST_COMMIT_MESSAGE" value=" mwra mou" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -209,8 +244,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pasc320.g4">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="169" selection-start-line="169" selection-end-line="169" />
+        <state relative-caret-position="185">
+          <caret line="424" column="22" selection-start-line="424" selection-start-column="22" selection-end-line="424" selection-end-column="22" />
         </state>
       </provider>
     </entry>
