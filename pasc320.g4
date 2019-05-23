@@ -2,7 +2,7 @@ grammar pasc320;
 
 
 //parser rules
-program : header declarations subprograms comp_statements DOT ;
+program : header declarations subprograms comp_statement DOT ;
 
 header : PROGRAM ID SEMI;
 
@@ -43,8 +43,8 @@ constant : ICONST
     |CCONST
     ;
 
-setexpression : LBRACK elexpressions COMMA expression
-    |expression
+setexpression : LBRACK elexpressions RBRACK
+    | LBRACK RBRACK
     ;
 
 elexpressions : elexpressions COMMA elexpression
@@ -52,7 +52,7 @@ elexpressions : elexpressions COMMA elexpression
     ;
 
 elexpression : expression DOTDOT expression
-    |elexpression
+    |expression
     ;
 
 typedefs : TYPE type_defs SEMI;//e
@@ -72,6 +72,8 @@ dims : dims COMMA limits
     |LPAREN identifiers RPAREN
     |limit DOTDOT limit
     ;
+
+limits: limit DOTDOT limit | IDENT;
 
 limit : ADDOP ICONST
    |ADDOP ID
@@ -105,8 +107,12 @@ variable_defs : variable_defs SEMI identifiers COLON typename
 
 subprograms : subprogram+ SEMI; //e
 
+subprogram :sub_header SEMI FORWARD
+    |sub_header SEMI declarations subprograms comp_statement
+    ;
+
 sub_header : FUNCTION ID formal_parameters COLON standard_type
-    |PROCEDURE ID foraml_parameters
+    |PROCEDURE ID formal_parameters
     | FUNCTION ID
     ;
 
@@ -155,7 +161,7 @@ subprogram_call : ID
 
 io_statement : READ LPAREN read_list;
 
-read_list :read_ list COMMA read_item
+read_list :read_list COMMA read_item
     |write_item
     ;
 
