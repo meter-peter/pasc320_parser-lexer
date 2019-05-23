@@ -168,14 +168,6 @@ write_item : expression
 
 
 
-ID : ^_?[a-z][a-z0-9_]*.[^_]$;
-ICONST : DECIMAL | HEXBIN;
-DECIMAL : ^(0$ | ([1-9][0-9]*)$);
-HEXBIN : ^(0B1[01]*|0H[1-9][1-9A-F]*);
-
-
-
-
 //lexer
 
 
