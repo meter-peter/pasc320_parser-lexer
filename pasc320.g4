@@ -1,6 +1,7 @@
 grammar pasc320;
 
 
+//parser rules
 program : header declarations subprograms comp_statements DOT ;
 
 header : PROGRAM ID SEMI;
@@ -115,6 +116,10 @@ parameter_list : parameter_list SEMI pass identifiers COLON typename
     | pass identifiers COLON typename
     ;
 
+pass : VAR; //e
+
+comp_statement : BEGIN statements END;
+
 statements : statements SEMI statement | statement;
 
 statement: assignment
@@ -122,8 +127,7 @@ statement: assignment
     |while_statement
     |for_statement
     |with_statement
-
-
+    |subprogram_call
     |io_statement
     |comp_statement
     ; //e
@@ -167,6 +171,9 @@ write_item : expression
 
 
 
+
+
+//lexer
 
 
 fragment A
@@ -398,8 +405,19 @@ LETTERDIGIT : (LETTER|DIGIT);
 
 SEMI: ';';
 
-RELOP:
+EQUAL: '=';
 
+NOT_EQUAL: '<>';
+
+LT: '<';
+
+LE:'<=';
+
+GE: '>=';
+
+GT: '>';
+
+RELOP: LT|LE|GE|GT|EQUAL|NOT_EQUAL;
 
 
 
