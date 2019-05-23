@@ -116,15 +116,6 @@ parameter_list : parameter_list SEMI pass identifiers COLON typename
     | pass identifiers COLON typename
     ;
 
-pass : VAR; //e
-
-<<<<<<< Updated upstream
-comp_statement : BEGIN statements END;
-=======
-ID :
-
->>>>>>> Stashed changes
-
 statements : statements SEMI statement | statement;
 
 statement: assignment
