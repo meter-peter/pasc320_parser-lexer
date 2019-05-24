@@ -2,14 +2,14 @@ grammar test;
 
 init: rconst;
 
-rconst: dec | rdecimal | rbinaty | rhexademical;
+rconst: rdecimal | rbinaty | rhexademical;
 
-rdecimal : RDECIMAL;
+rdecimal : FLOAT | EXPONENT;
 rbinaty : RBINARY;
 rhexademical : RHEXADECIMAL;
-exponent : EXPONENT ;
 
-RDECIMAL : ('0'|[1-9]DIGIT*)?('.')('0'|'0'*[1-9]DIGIT*);
+
+FLOAT : ('0'|[1-9]DIGIT*)?(EXPONENT | ('.')('0'|'0'*[1-9]DIGIT*));
 
 RBINARY : ('0B')('0'|'1'[0-1]*)?('.')('0'|'0'*'1'[0-1]*);
 
@@ -19,4 +19,4 @@ DIGIT : [0-9];
 
 HEXDIGIT : [0-9A-F];
 
-EXPONENT : ('0'|[1-9]DIGIT*)('E'[+-]?DIGIT+)?;
+EXPONENT : 'E'[+-]?DIGIT+;
